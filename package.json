@@ -1,0 +1,16 @@
+{
+  "name": "qr-commons",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Open-source, local-first tooling for generating static QR codes you actually own.",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "pnpm -r --if-present run check",
+    "test": "pnpm -r --if-present run test",
+    "build": "pnpm -r --if-present run build"
+  }
+}
