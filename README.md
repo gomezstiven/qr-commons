@@ -8,7 +8,9 @@ QR Commons is intended to make standards-correct, portable QR generation freely 
 
 ## Project status
 
-**Pre-alpha / bootstrap.** The repository currently establishes the project contract, architecture boundaries, contribution model, and implementation roadmap. The first implementation milestone will extract and generalize the proven deterministic QR generation work that motivated the project.
+**Pre-alpha / R0.1 design.** The repository has an accepted R0 project boundary and is now defining the first portable executable milestone. R0.1 establishes the open-source infrastructure and contracts for a deterministic static QR core before building a polished hosted application.
+
+See [R0.1 — Portable Static Core](./docs/milestones/R0.1.md) and the [R0.1 infrastructure architecture](./docs/architecture/R0.1-INFRASTRUCTURE.md).
 
 ## Principles
 
@@ -38,18 +40,19 @@ QR Commons is intended to make standards-correct, portable QR generation freely 
 ```text
 qr-commons/
 ├── apps/
-│   └── web/                 # Hosted free authoring experience
+│   └── web/                 # Downstream hosted reference experience
 ├── packages/
-│   ├── core/                # Canonical QR domain model + encoding contracts
-│   ├── formats/             # URL/text/Wi-Fi/vCard/etc payload adapters
-│   ├── renderer/            # Deterministic SVG/raster rendering contracts
-│   └── validator/           # Safety, contrast, sizing and scannability rules
+│   ├── core/                # Canonical symbol model + encoding contract
+│   ├── formats/             # Reserved until structured payload APIs exist
+│   ├── renderer/            # Matrix-to-artifact rendering; SVG first
+│   └── validator/           # Reserved until a public preflight API exists
+├── tests/
+│   └── conformance/         # Cross-package independent checks (R0.1)
 ├── docs/
-│   ├── PROJECT-CHARTER.md
-│   ├── ROADMAP.md
+│   ├── milestones/
+│   ├── decisions/
 │   └── architecture/
-│       └── BASELINE.md
-└── .github/                 # Contribution and issue workflow
+└── .github/
 ```
 
 The repository is deliberately separated from any dynamic QR resolver or hosted redirect service.
@@ -57,6 +60,10 @@ The repository is deliberately separated from any dynamic QR resolver or hosted 
 ## License
 
 Apache License 2.0. See [LICENSE](./LICENSE).
+
+## Trademarks
+
+See [TRADEMARKS.md](./TRADEMARKS.md). “QR Code” is a registered trademark of DENSO WAVE INCORPORATED in Japan and other countries. QR Commons is independent and is not affiliated with or endorsed by DENSO WAVE.
 
 ## Author
 
