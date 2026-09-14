@@ -2,15 +2,26 @@
 
 The roadmap is directional, not a release promise.
 
-## v0.1 — Correct static core
+## R0.1 — Portable static core
 
-- canonical text and URL payloads;
-- deterministic QR encoding contract;
-- deterministic SVG renderer;
-- basic size, margin, and error-correction controls;
-- browser export;
-- baseline validation;
-- test fixtures and roundtrip checks.
+- public OSS runtime/tooling baseline;
+- canonical text payload and error-correction contract;
+- immutable borderless QR matrix/symbol model;
+- default encoder isolated behind QR Commons-owned APIs;
+- deterministic SVG renderer with standards-safe quiet zone;
+- independent conformance roundtrip tests;
+- Node/browser-compatible library boundaries;
+- no npm publication yet.
+
+**Exit condition:** the repository can turn representative text payloads into deterministic, standards-correct SVG artifacts and independently verify semantic roundtrip without accounts, redirects, server-side payload processing, UI framework dependencies, or organization-specific infrastructure.
+
+## v0.1 — Correct static utility
+
+- URL-oriented authoring on top of the R0.1 text core;
+- browser reference experience;
+- baseline user-facing validation;
+- SVG export workflow;
+- first public package/release decision if contracts have proven stable.
 
 **Exit condition:** QR Commons can replace a basic static QR generator without accounts, redirects, or server-side payload processing.
 
